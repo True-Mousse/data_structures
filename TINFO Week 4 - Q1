@@ -67,14 +67,19 @@ def main():
 
 # Reveresal of Queue 
     # Loops until main Queue is Empty of Elements
-    while (queue_A.size != 0):
+    for i in range(queue_A.size):
         # Removes elements from queue_A until 1x Element left
         for i in range(1, queue_A.size):
             queue_B.enqueue(queue_A.dequeue())
-        # Prints & removes last element of qeueu_A
-        print(queue_A.dequeue())
+            # Prints & removes last element of qeueu_A
+            #print(queue_A.queue)
+            if (queue_A.size == 1):
+                print("Peak:", queue_A.peek())
         # Moves Elements from queue_B bk to queue_A to start over again
         for i in range(0, queue_B.size):
-            queue_A.enqueue(queue_B.dequeue())
+            queue_A.enqueue(queue_B.dequeue())    
+
+    print("Queue A: ", queue_A.queue)
+    print("Queue B ", queue_B.queue)
        
 main()
