@@ -70,27 +70,34 @@ def main():
         userInput = input("Please input a single character: ")
         stack_A.push(userInput)
 
-# Denqueue = Removes the First Element of the Stack 
+
+    print("Stack A: ", stack_A.stack)
+    print("Peek Stack A: ", stack_A.peek())
+    print("Pop Stack A: ", stack_A.pop())
+    print("Stack A: ", stack_A.stack)
+###########
+# Dequeue # 
+###########
+    # Prints & Removes the First Element of the Stack 
     # Moves elements to stack_B until First-In Element of stack_A reached
     for i in range(1, stack_A.size):
         stack_B.push(stack_A.pop())
 
-    print("Enqueue: ", stack_A.pop())
+    print("Dequeue: ", stack_A.pop())
     for i in range(0, stack_B.size):
         stack_A.push(stack_B.pop())
 
     print("Final Stack A:", stack_A.stack)
     print("Final Stack B:", stack_B.stack)
 
-# Enqueue = Adds an Element to the Stack 
-    # Moves elements to stack_B until First-In Element of stack_A reached
-    # for i in range(1, stack_A.size):
-    #     stack_B.push(stack_A.pop())
+###########
+# Enqueue #  
+ ##########   
+    # Adds an Element to the Stack
+    userInput = input("Please input a single character: ")
+    print("Enqueue: " + userInput)
+    stack_A.push(userInput)
 
-    # print("Enqueue: ", stack_A.pop())
-    # for i in range(0, stack_B.size):
-    #     stack_A.push(stack_B.pop())
-
-    # print("Final Stack A:", stack_A.stack)
-    # print("Final Stack B:", stack_B.stack)
+    print("Final Stack A:", stack_A.stack)
+    print("Final Stack B:", stack_B.stack)
 main()
